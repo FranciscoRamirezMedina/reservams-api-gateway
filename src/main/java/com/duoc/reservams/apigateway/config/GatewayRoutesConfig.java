@@ -13,11 +13,19 @@ public class GatewayRoutesConfig {
     public RouteLocator customRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
 
+                //ruta hacia auth-server
                 // toda peticion /api/v1/auth/** se enviara al auth-service
                 .route("auth-service", route -> route
                         .path("/api/v1/auth/**")
                         .uri("http://localhost:8081"))
 
+                //ruta hacia user-service
+                .route("user-service", route -> route
+                        .path("/api/v1/users/**")
+                        .uri("http://localhost:8082"))
+
+
                 .build();
+
     }
 }
