@@ -24,6 +24,11 @@ public class GatewayRoutesConfig {
                         .path("/api/v1/users/**")
                         .uri("http://localhost:8082"))
 
+                // Ruta hacia hotel-service
+                .route("hotel-service", route -> route
+                        .path("/api/v1/hotels/**")
+                        .uri("http://localhost:8083"))
+
 
                 .build();
 
