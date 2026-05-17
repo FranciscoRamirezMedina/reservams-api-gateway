@@ -34,6 +34,13 @@ public class GatewayRoutesConfig {
                         .path("/api/v1/rooms/**")
                         .uri("http://localhost:8084"))
 
+                // Ruta hacia availability-service
+                .route("availability-service", route -> route
+                        .path("/api/v1/availability/**")
+                        .uri("http://localhost:8085"))
+
+
+
                 .build();
 
     }
