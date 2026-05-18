@@ -49,6 +49,11 @@ public class GatewayRoutesConfig {
                         .path("/api/v1/payments/**")
                         .uri("http://localhost:8087"))
 
+                // Ruta hacia notification-service
+                .route("notification-service", route -> route
+                        .path("/api/v1/notifications/**")
+                        .uri("http://localhost:8088"))
+
                 .build();
 
     }
