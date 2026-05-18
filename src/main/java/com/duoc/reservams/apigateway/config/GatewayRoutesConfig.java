@@ -44,6 +44,11 @@ public class GatewayRoutesConfig {
                         .path("/api/v1/reservations/**")
                         .uri("http://localhost:8086"))
 
+                // Ruta hacia payment-service
+                .route("payment-service", route -> route
+                        .path("/api/v1/payments/**")
+                        .uri("http://localhost:8087"))
+
                 .build();
 
     }
