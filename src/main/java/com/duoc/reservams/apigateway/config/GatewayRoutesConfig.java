@@ -39,7 +39,10 @@ public class GatewayRoutesConfig {
                         .path("/api/v1/availability/**")
                         .uri("http://localhost:8085"))
 
-
+                // Ruta hacia reservation-service
+                .route("reservation-service", route -> route
+                        .path("/api/v1/reservations/**")
+                        .uri("http://localhost:8086"))
 
                 .build();
 
