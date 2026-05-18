@@ -59,6 +59,11 @@ public class GatewayRoutesConfig {
                         .path("/api/v1/reviews/**")
                         .uri("http://localhost:8089"))
 
+                // Ruta hacia report-service
+                .route("report-service", route -> route
+                        .path("/api/v1/reports/**")
+                        .uri("http://localhost:8090"))
+
                 .build();
 
     }
