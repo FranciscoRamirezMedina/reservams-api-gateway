@@ -1,0 +1,16 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}
+
+services:
+  auth-url: ${AUTH_SERVICE_URL}
+  user-url: ${USER_SERVICE_URL}
+  hotel-url: ${HOTEL_SERVICE_URL}
+  room-url: ${ROOM_SERVICE_URL}
+  availability-url: ${AVAILABILITY_SERVICE_URL}
+  reservation-url: ${RESERVATION_SERVICE_URL}
+  payment-url: ${PAYMENT_SERVICE_URL}
+  notification-url: ${NOTIFICATION_SERVICE_URL}
+  review-url: ${REVIEW_SERVICE_URL}
+  report-url: ${REPORT_SERVICE_URL}

@@ -1,14 +1,11 @@
 spring:
   application:
     name: reservams-api-gateway
+  profiles:
+    active: dev
 
 server:
   port: 8080
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
 
 management:
   endpoints:
